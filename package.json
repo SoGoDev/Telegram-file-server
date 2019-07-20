@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "airgram": "^1.1.2",
+    "airgram-api": "^1.1.2",
     "ffi-napi": "^2.4.5",
     "nodemon": "^1.19.1",
     "ref-napi": "^1.4.1"
