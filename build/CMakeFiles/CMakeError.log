@@ -1,0 +1,94 @@
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2 failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_93eeb/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_93eeb.dir/build.make CMakeFiles/cmTC_93eeb.dir/build
+Building CXX object CMakeFiles/cmTC_93eeb.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -DHAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2 -Wimplicit-fallthrough=2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -Wimplicit-fallthrough=2 -o CMakeFiles/cmTC_93eeb.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wimplicit-fallthrough=2'; did you mean '-Wimplicit-fallthrough'? [-Wunknown-warning-option]
+warning: unknown warning option '-Wimplicit-fallthrough=2'; did you mean '-Wimplicit-fallthrough'? [-Wunknown-warning-option]
+2 warnings generated.
+Linking CXX executable cmTC_93eeb
+/usr/local/Cellar/cmake/3.14.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93eeb.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -DHAVE_CXX_FLAG_WIMPLICIT_FALLTHROUGH_2 -Wimplicit-fallthrough=2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_93eeb.dir/src.cxx.o  -o cmTC_93eeb 
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WDUPLICATED_BRANCHES failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a9d07/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a9d07.dir/build.make CMakeFiles/cmTC_a9d07.dir/build
+Building CXX object CMakeFiles/cmTC_a9d07.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WDUPLICATED_BRANCHES -Wduplicated-branches -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -Wduplicated-branches -o CMakeFiles/cmTC_a9d07.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wduplicated-branches' [-Wunknown-warning-option]
+warning: unknown warning option '-Wduplicated-branches' [-Wunknown-warning-option]
+2 warnings generated.
+Linking CXX executable cmTC_a9d07
+/usr/local/Cellar/cmake/3.14.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9d07.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WDUPLICATED_BRANCHES -Wduplicated-branches -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a9d07.dir/src.cxx.o  -o cmTC_a9d07 
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WDUPLICATED_COND failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3502/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e3502.dir/build.make CMakeFiles/cmTC_e3502.dir/build
+Building CXX object CMakeFiles/cmTC_e3502.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WDUPLICATED_COND -Wduplicated-cond -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -Wduplicated-cond -o CMakeFiles/cmTC_e3502.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wduplicated-cond'; did you mean '-Wduplicate-enum'? [-Wunknown-warning-option]
+warning: unknown warning option '-Wduplicated-cond'; did you mean '-Wduplicate-enum'? [-Wunknown-warning-option]
+2 warnings generated.
+Linking CXX executable cmTC_e3502
+/usr/local/Cellar/cmake/3.14.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3502.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WDUPLICATED_COND -Wduplicated-cond -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e3502.dir/src.cxx.o  -o cmTC_e3502 
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WALLOC_ZERO failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_310e7/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_310e7.dir/build.make CMakeFiles/cmTC_310e7.dir/build
+Building CXX object CMakeFiles/cmTC_310e7.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WALLOC_ZERO -Walloc-zero -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -Walloc-zero -o CMakeFiles/cmTC_310e7.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Walloc-zero'; did you mean '-Wdiv-by-zero'? [-Wunknown-warning-option]
+warning: unknown warning option '-Walloc-zero'; did you mean '-Wdiv-by-zero'? [-Wunknown-warning-option]
+2 warnings generated.
+Linking CXX executable cmTC_310e7
+/usr/local/Cellar/cmake/3.14.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_310e7.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WALLOC_ZERO -Walloc-zero -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_310e7.dir/src.cxx.o  -o cmTC_310e7 
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WLOGICAL_OP failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_21d7d/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_21d7d.dir/build.make CMakeFiles/cmTC_21d7d.dir/build
+Building CXX object CMakeFiles/cmTC_21d7d.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WLOGICAL_OP -Wlogical-op -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -Wlogical-op -o CMakeFiles/cmTC_21d7d.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wlogical-op'; did you mean '-Wlong-long'? [-Wunknown-warning-option]
+warning: unknown warning option '-Wlogical-op'; did you mean '-Wlong-long'? [-Wunknown-warning-option]
+2 warnings generated.
+Linking CXX executable cmTC_21d7d
+/usr/local/Cellar/cmake/3.14.5/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21d7d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -DHAVE_CXX_FLAG_WLOGICAL_OP -Wlogical-op -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_21d7d.dir/src.cxx.o  -o cmTC_21d7d 
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING failed with the following output:
+Change Dir: /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a37e8/fast 
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a37e8.dir/build.make CMakeFiles/cmTC_a37e8.dir/build
+Building CXX object CMakeFiles/cmTC_a37e8.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -fno-omit-frame-pointer -fno-exceptions -fno-rtti -Wall -Wextra -Wpointer-arith -Wcast-qual -Wsign-compare -Wno-tautological-compare -Wpointer-arith -Wvla -Wnon-virtual-dtor -Wno-unused-parameter -Wconversion -Wno-sign-conversion -Wc++14-compat-pedantic -Wdeprecated -Qunused-arguments -Wodr -DHAVE_CXX_FLAG_FLTO_ODR_TYPE_MERGING -flto-odr-type-merging -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fPIE   -flto-odr-type-merging -o CMakeFiles/cmTC_a37e8.dir/src.cxx.o -c /Users/sogo/Desktop/td/build/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-flto-odr-type-merging'
+clang: error: unknown argument: '-flto-odr-type-merging'
+make[1]: *** [CMakeFiles/cmTC_a37e8.dir/src.cxx.o] Error 1
+make: *** [cmTC_a37e8/fast] Error 2
+
+Source file was:
+int main() { return 0; }

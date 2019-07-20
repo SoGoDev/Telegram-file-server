@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtdc.a  CMakeFiles/tdc.dir/td/generate/auto/td/telegram/td_tdc_api.cpp.o CMakeFiles/tdc.dir/td/telegram/td_c_client.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtdc.a

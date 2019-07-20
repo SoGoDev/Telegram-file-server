@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../tdtl/td/tl/tl_file_utils.h
+string
+-
+
+/Users/sogo/Desktop/td/td/generate/remove_documentation.cpp
+td/tl/tl_file_utils.h
+/Users/sogo/Desktop/td/td/generate/td/tl/tl_file_utils.h
+cstdio
+-
+cstdlib
+-
+string
+-
+
