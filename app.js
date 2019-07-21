@@ -1,4 +1,5 @@
 const fs = require('fs');
+const os = require('os');
 const { Airgram, Auth, prompt } = require('airgram');
 const { UPDATE } = require('airgram-api');
 const config = require('./config.json');
@@ -7,7 +8,7 @@ const airgram = new Airgram({
     apiId: Number(config.app_id),
     apiHash: config.app_hash,
     logVerbosityLevel: 2,
-    command: './td/build/libtdjson.dylib'
+    command: `./td/build/${config.CPP_LIB[os.type()]}`
 });
 
 const auth = new Auth(airgram);

@@ -2,5 +2,9 @@
   "app_hash": "",
   "app_id": "",
   "phone_number": "",
-  "folder": "/files"
+  "folder": "/files",
+  "CPP_LIB": {
+    "Darwin" : "libtdjson.dylib",
+    "Linux": "libtdjson.so"
+  }
 }
