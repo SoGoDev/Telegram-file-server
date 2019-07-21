@@ -8,5 +8,5 @@ Run `npm run deploy` to run bash script that depoy for you project
 Go to https://my.telegram.org/auth to registrate your app 
 Copy your `app_hash` and `app_id` to config.json 
 
-Run `npm start` to start 
+Run `npm start` to start  
 Run `npm run stop` to stop project
