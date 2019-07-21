@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtdjson_static.a  CMakeFiles/tdjson_static.dir/td/telegram/td_json_client.cpp.o CMakeFiles/tdjson_static.dir/td/telegram/td_log.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtdjson_static.a

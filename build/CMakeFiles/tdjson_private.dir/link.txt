@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtdjson_private.a  CMakeFiles/tdjson_private.dir/td/generate/auto/td/telegram/td_api_json.cpp.o CMakeFiles/tdjson_private.dir/td/telegram/ClientJson.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtdjson_private.a
