@@ -25,9 +25,11 @@ then
     echo "ubuntu 18"
     ls
     chmod +x ./ubuntu_18.sh
-    ./ubuntu 18
+    ./ubuntu_18
 elif [ $system -eq 4 ]
 then
-    echo "macOs"
-    $("./macos")
+     echo "ubuntu 14"
+    ls
+    chmod +x ./ubuntu_14.sh
+    ./ubuntu_14
 fi
