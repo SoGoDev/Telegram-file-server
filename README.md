@@ -3,9 +3,10 @@ Telegram file server handle all files that you recieve from chats and save to lo
 
 ## How to deploy
 
-Run `npm i` to install all dependencies
+Run `npm run deploy` to run bash script that depoy for you project
 
 Go to https://my.telegram.org/auth to registrate your app 
 Copy your `app_hash` and `app_id` to config.json 
 
-Run `npm start`
+Run `npm start` to start 
+Run `npm run stop` to stop project

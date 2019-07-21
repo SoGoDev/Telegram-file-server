@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "deploy": "cd ./sh_deploy_scripts && chmod +x ./deploy.sh && ./deploy.sh",
+    "start": "pm2 start index.js && pm2 monit",
+    "stop" : "pm2 stop index.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "airgram-api": "^1.1.2",
     "ffi-napi": "^2.4.5",
     "nodemon": "^1.19.1",
+    "pm2": "^3.5.1",
     "ref-napi": "^1.4.1"
   }
 }

@@ -7,7 +7,7 @@ const airgram = new Airgram({
     apiId: Number(config.app_id),
     apiHash: config.app_hash,
     logVerbosityLevel: 2,
-    command: './build/libtdjson.dylib'
+    command: './td/build/libtdjson.dylib'
 });
 
 const auth = new Auth(airgram);
@@ -18,7 +18,6 @@ auth.use({
 });
 
 airgram.updates.on(UPDATE.updateNewMessage, ({ update }, next) => {
-
     if (update.message.content.document) {
         downloadFile(update.message.content.document.document)
     } else if (update.message.content.video) {
