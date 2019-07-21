@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "cd ./sh_deploy_scripts && chmod +x ./deploy.sh && ./deploy.sh",
     "start": "pm2 start index.js && pm2 monit",
-    "stop" : "pm2 stop index.js"
+    "stop": "pm2 stop index.js"
   },
   "author": "",
   "license": "ISC",

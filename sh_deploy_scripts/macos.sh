@@ -15,4 +15,5 @@ cmake -DCMAKE_BUILD_TYPE=Release -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl/ -DCM
 cmake --build . --target install
 cd ../../
 ls -l td/tdlib
+npm install
 echo "=====> Finish deploying <====="

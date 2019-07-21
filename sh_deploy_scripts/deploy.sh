@@ -4,7 +4,7 @@
 echo "PRESS 1 - macOs"
 echo "PRESS 2 - ubuntu 16"
 echo "PRESS 3 - ubuntu 18"
-echo "PRESS 4 - ubuntu 14"
+#echo "PRESS 4 - ubuntu 14"
 
 read -p "Choose your system: "  system
 
@@ -26,10 +26,10 @@ then
     ls
     chmod +x ./ubuntu_18.sh
     ./ubuntu_18
-elif [ $system -eq 4 ]
-then
-     echo "ubuntu 14"
-    ls
-    chmod +x ./ubuntu_14.sh
-    ./ubuntu_14
+#elif [ $system -eq 4 ]
+#then
+#     echo "ubuntu 14"
+#    ls
+#    chmod +x ./ubuntu_14.sh
+#    ./ubuntu_14
 fi
