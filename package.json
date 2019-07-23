@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "deploy": "cd ./sh_deploy_scripts && chmod +x ./deploy.sh && ./deploy.sh",
-    "start": "pm2 start index.js && pm2 monit",
+    "start": "pm2 start index.js && pm2 attach 0",
     "stop": "pm2 stop index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "airgram": "^1.1.2",
+    "airgram": "^1.2.0",
     "airgram-api": "^1.1.2",
     "ffi-napi": "^2.4.5",
     "nodemon": "^1.19.1",
