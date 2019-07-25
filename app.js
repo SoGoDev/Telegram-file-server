@@ -1,40 +1,69 @@
 const fs = require('fs');
 const os = require('os');
 const { Airgram, Auth, prompt } = require('airgram');
-const { UPDATE, input } = require('airgram-api');
+const { UPDATE } = require('airgram-api');
 const config = require('./config.json');
 
 const airgram = new Airgram({
     apiId: Number(config.app_id),
     apiHash: config.app_hash,
-    phoneNumber: config.phone_number,
-    logVerbosityLevel: 2,
+    logVerbosityLevel: 0,
     useTestDc: false,
     useChatInfoDatabase: true,
+    useMessageDatabase: true,
     applicationVersion: "1.0a",
     command: `./td/build/${config.CPP_LIB[os.type()]}`
 });
 
 const auth = new Auth(airgram);
 
+function checkIfWatchFoldersIsEmpry() {
+    config.watches_folders.forEach(folder => {
+        const result = fs.readdirSync(folder);
+        if (result.length) result.forEach((filename) => {
+            uploadNewFileToTelegram(`${folder}/${filename}`)
+        })
+    })
+}
+
+let state = [];
+
 auth.use({
     code: () => prompt(`Please enter the secret code:\n`),
+    phoneNumber: config.phone_number,
 });
 
 auth.ready(() => {
-    airgram.api.getMe().then((response) => {
-        console.info(response)
-    })
+    console.log("Telegram test server started");
+    checkIfWatchFoldersIsEmpry();
+    fileWatcher();
+    airgram.api.getChats({ limit: 10000 })
+});
 
+airgram.on(UPDATE.updateFile, ({ update }, next) => {
+    if (update.file.remote.isUploadingActive && state.find(a => a === update.file.id)) {
+        if(update.file.remote.uploadedSize){
+            const fileSplitedPath = update.file.local.path.split('/');
+            console.log(`Downloading File ${fileSplitedPath[fileSplitedPath.length-1]}, uploaded size ${update.file.remote.uploadedSize}`);
+
+        }else{
+            console.log(`Sending File ${fileSplitedPath[fileSplitedPath.length-1]} from telegram cloud, size ${update.file.local.downloadedSize}`);
+        }
+    }
+    if (!update.file.local.isDownloadingActive && state.find(a => a === update.file.id)) {
+        state = state.filter(e => e !== update.file.id);
+        sendFile(update.file)
+    }
+
+    next()
 });
 
 airgram.updates.on(UPDATE.updateNewMessage, ({ update }, next) => {
-    console.log(update.message.chatId);
-    if (update.message.content.document) {
+    if (config.file_types_handle.documents && update.message.content.document) {
         downloadFile(update.message.content.document.document)
-    } else if (update.message.content.video) {
+    } else if (config.file_types_handle.video && update.message.content.video) {
         downloadFile(update.message.content.video.video)
-    } else if (update.message.content.photo) {
+    } else if (config.file_types_handle.photo && update.message.content.photo) {
         const photo = update.message.content.photo.sizes;
         downloadFile(photo[photo.length - 1].photo)
     }
@@ -57,39 +86,22 @@ function downloadFile({ id }) {
         const format = c[c.length - 1];
         const b = fs.createWriteStream(`.${config.folder}/${name}_${new Date().getTime()}.${format}`, { flag: 'w' });
         a.pipe(b);
-        fs.unlinkSync(data.local.path);
-    })
+
+        if (fs.existsSync(data.local.path) && config.watches_folders.includes(data.local.path)) a.pipe(() => fs.unlinkSync(
+            data.local.path));
+    }).catch((a) => console.log(a))
 }
 
 //file watcher
 
 function fileWatcher() {
-
     config.watches_folders.forEach(element => {
         if (!fs.existsSync(element)) return console.log(`folder ${element} does not exists`);
+
         fs.watch(element, (eventType, filename) => {
 
-            if (eventType === 'rename') {
-                const conf = {
-                    _: 'inputMessageText',
-                    text: {
-                        _: 'formattedText',
-                        text: "dasdasd",
-                    }
-                    //                    document: {
-                    //                        _: 'inputFileLocal',
-                    //                        path: `${element}/${filename}`
-                    //                    }
-                };
-
-                //                                airgram.api.sendMessage({
-                //                        chatId: 348885986,
-                //                        fromBackground:true,
-                //                        inputMessageContent: conf
-                //                    })
-                //                    .then(e => console.log(e))
-                //                    .catch(e => console.log(e))
-
+            if (eventType === 'rename' && fs.existsSync(element + "/" + filename)) {
+                uploadNewFileToTelegram(element + "/" + filename)
             }
 
         })
@@ -97,3 +109,52 @@ function fileWatcher() {
 
 }
 
+function uploadNewFileToTelegram(path) {
+    airgram.api.uploadFile({
+        file: {
+            _: 'inputFileLocal',
+            path: path,
+        },
+        fileType: {
+            _: 'fileTypeDocument'
+        },
+        priority: 32
+    }).then((e) => {
+
+        const fileSplitedPath = e.local.path.split('/');
+        if(e.remote.uploadedSize){
+            console.log(`Downloading File ${fileSplitedPath[fileSplitedPath.length-1]}, uploaded size ${e.remote.uploadedSize}`);
+
+        }else{
+            console.log(`Sending File ${fileSplitedPath[fileSplitedPath.length-1]} from telegram cloud, size ${e.local.downloadedSize}`);
+        }
+
+        if (e.remote.id) {
+            return sendFile(e, false)
+        }
+        state.push(e.id);
+    })
+}
+
+function sendFile(e, isLocal = true) {
+    const fileContext = {
+        _: 'inputFileId',
+        id: e.id
+    };
+
+    if (!isLocal) {
+        fileContext._ = 'inputFileRemote';
+        fileContext.id = e.remote.id
+    }
+
+    airgram.api.sendMessage({
+        chatId: +config.to_channel_id,
+        replyToMessageId: 0,
+        disableNotification: false,
+        fromBackground: true,
+        inputMessageContent: {
+            _: 'inputMessageDocument',
+            document: fileContext
+        }
+    })
+}

@@ -1,12 +1,17 @@
 {
-  "app_id": "782594",
-  "app_hash": "124ffcad06857c62643c56cad4623537",
-  "phone_number": "+380935668805",
+  "app_id": "",
+  "app_hash": "",
+  "phone_number": "",
   "folder": "/files",
   "CPP_LIB": {
-    "Darwin" : "libtdjson.dylib",
+    "Darwin": "libtdjson.dylib",
     "Linux": "libtdjson.so"
   },
-  "watches_folders": ["./Folder"],
-  "to_channel_id": 336854729
+  "watches_folders": [],
+  "to_channel_id": 0,
+  "file_types_handle": {
+    "documents": true,
+    "video": true,
+    "photo": false
+  }
 }
