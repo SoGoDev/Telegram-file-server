@@ -19,13 +19,13 @@ then
     echo "ubuntu 16"
     ls
     chmod +x ./ubuntu_16.sh
-    ./ubuntu_16
+    ./ubuntu_16.sh
 elif [ $system -eq 3 ]
 then
     echo "ubuntu 18"
     ls
     chmod +x ./ubuntu_18.sh
-    ./ubuntu_18
+    ./ubuntu_18.sh
 #elif [ $system -eq 4 ]
 #then
 #     echo "ubuntu 14"
