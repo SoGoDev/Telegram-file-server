@@ -1,18 +1,18 @@
 {
-  "app_id": "",
-  "app_hash": "",
-  "phone_number": "",
-  "uploaded": "",
-  "for_upload": "",
-  "upload_done": "",
-  "to_channel_id": 0,
+  "app_id": "997873",
+  "app_hash": "daeb9f25837cb16b1627619c5aeed214",
+  "phone_number": "+18088005691",
+  "uploaded": "./download",
+  "for_upload": "./upload",
+  "upload_done": "./done",
+  "to_channel_id": 952533229,
   "file_types_handle": {
     "document": true,
     "video": true,
     "photo": false
   },
   "CPP_LIB": {
-    "Darwin": "libtdjson.dylib",
-    "Linux": "libtdjson.so"
+    "Darwin": "libtdjson",
+    "Linux": "libtdjson"
   }
 }

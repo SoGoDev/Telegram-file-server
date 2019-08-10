@@ -13,19 +13,19 @@ then
     echo "macos"
     ls
     chmod +x ./macos.sh
-    ./macos.sh
+    sh_deploy_scripts/macos.sh
 elif [ $system -eq 2 ]
 then
     echo "ubuntu 16"
     ls
     chmod +x ./ubuntu_16.sh
-    ./ubuntu_16.sh
+    sh_deploy_scripts/ubuntu_16.sh
 elif [ $system -eq 3 ]
 then
     echo "ubuntu 18"
     ls
     chmod +x ./ubuntu_18.sh
-    ./ubuntu_18.sh
+    sh_deploy_scripts/ubuntu_18.sh
 #elif [ $system -eq 4 ]
 #then
 #     echo "ubuntu 14"

@@ -35,6 +35,7 @@ class Telegram_file_manager {
     initState(config) {
         this.state = {
             files: [],
+            watch_folder: {},
             client: null,
             to_channel_id: config.to_channel_id,
             folders: {
@@ -169,8 +170,8 @@ class Telegram_file_manager {
     }
 
     uploadFile(event, filename) {
-        if (event !== 'rename' || !fs.existsSync(this.state.folders.for_upload + "/" + filename)) return null;
-
+        if (!fs.existsSync(this.state.folders.for_upload + "/" + filename)) return null;
+        console.log("Inn");
         const path = this.state.folders.for_upload + "/" + filename;
         const uploadconfig = {
             file: { _: 'inputFileLocal', path: path, },
@@ -181,6 +182,7 @@ class Telegram_file_manager {
     }
 
     receiveDataAfterUploadFile(data) {
+        console.log(data)
         if (data.remote.id) {
             this.state.files.push({
                 status: SENDING,
