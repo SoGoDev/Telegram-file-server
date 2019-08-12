@@ -4,7 +4,6 @@ echo "=====> Start deploying <====="
 #$(xcode-select --install)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install gperf cmake openssl
-cd ../
 $(git clone https://github.com/tdlib/td.git)
 cd td
 echo $(ls)
