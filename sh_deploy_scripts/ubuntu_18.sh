@@ -18,5 +18,5 @@ ls -l td/tdlib
 sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
 sudo apt-get --assume-yes install nodejs
 sudo apt install --assume-yes npm
-npm i
+npm install --no-optional
 echo "=====> Finish deploying <====="
