@@ -2,7 +2,7 @@
 Telegram file server handle all files that you recieve from chats and save to local folder
 
 ## System preferences
-Ubuntu 16 => 18
+Ubuntu 16^  
 Mac Os 10^ 
 
 ## How to deploy
